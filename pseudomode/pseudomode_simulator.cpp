@@ -81,18 +81,18 @@ void PseudomodeSimulator::simulate(const Eigen::VectorXcd& initial, const size_t
 	sp.push_back(1.0);
 	m_reductor.reduce(initial, rhos.front());
 	Eigen::VectorXcd state_plus(initial);
-	Eigen::VectorXcd state_minus(initial);
+	//Eigen::VectorXcd state_minus(initial);
 	double cum_scale_plus = 1.0;
 	for (size_t i = 0; i < n; ++i) {
 		m_evolver_plus.step(m_evolver_plus.timeStep(), state_plus);
-		m_evolver_minus.step(m_evolver_minus.timeStep(), state_minus);
+		//m_evolver_minus.step(m_evolver_minus.timeStep(), state_minus);
 		const double norm_plus = state_plus.norm();
-		const double norm_minus = state_minus.norm();
-		//std::cout << "NORMS: " << i*m_evolver_plus.timeStep() << " " << norm_plus << " " << norm_minus << std::endl;
-		state_minus /= norm_minus;
+		//const double norm_minus = state_minus.norm();
+		//std::cout << "NORMS: " << i*m_evolver_plus.timeStep() << " " << norm_plus << " " << norm_minus << std::endl;		
 		state_plus /= norm_plus;
+		//state_minus /= norm_minus;
 		cum_scale_plus *= norm_plus;
-		m_reductor.reduce(state_minus, state_plus, rhos[i + 1]);
+		m_reductor.reduce(state_plus, state_plus, rhos[i + 1]);
 		sp.push_back(initial.dot(state_plus) * cum_scale_plus);
 	}
 }

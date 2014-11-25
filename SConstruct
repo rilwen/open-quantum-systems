@@ -6,7 +6,7 @@ import SCons
 mymode = ARGUMENTS.get('mode', 'release')   #holds current mode
 Export('mymode')
 
-#check if the user has been naughty: only 'debug' or 'release' allowed
+# only 'debug' or 'release' allowed
 if not (mymode in ['debug', 'release']):
    print "Error: expected 'debug' or 'release', found: " + mymode
    Exit(1)
@@ -76,4 +76,4 @@ SConsEnvironment.InstallPerm = InstallPerm
 
 
 env.Alias('install-lib', env.InstallPerm(os.path.join(PREFIX, 'lib'), [math, qsd, protein_chain, cfa], 0644))
-env.Alias('install-bin', env.InstallPerm(os.path.join(PREFIX, 'bin'), [pseudomode_absorption, cfa_transport, strunz_transport, redfield], 0755))
+env.Alias('install-bin', env.InstallPerm(os.path.join(PREFIX, 'bin'), [pseudomode_absorption, cfa_transport, strunz_transport], 0755))

@@ -1,0 +1,3 @@
+Import('env')
+pseudomode = env.StaticLibrary('pseudomode', Glob('*.cpp'))
+Return('pseudomode')

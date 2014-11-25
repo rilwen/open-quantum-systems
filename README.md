@@ -1,7 +1,9 @@
 open-quantum-systems
 ====================
 
-(C) Agnieszka M. Werpachowska 2011-2014
+(C) Averisera Ltd (Dr Agnieszka M. Werpachowska) 2011-2014
+
+Licensed under GNU Public License v3 (see https://www.gnu.org/licenses/gpl.html and LICENSE.txt)
 
 This is a C++ code for modelling open quantum systems, accompanying my paper 
 

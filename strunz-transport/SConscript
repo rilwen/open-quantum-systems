@@ -1,0 +1,12 @@
+Import('env')
+Import('protein_chain')
+Import('math')
+Import('qsd')
+Import('OTHER_LIBS')
+Import('mymode')
+penv = env.Clone()
+penv.Append(LIBS = [qsd, protein_chain, math] + OTHER_LIBS)
+if mymode == 'release':
+	penv.Append(CXXFLAGS = '-fwhole-program')	
+strunz_transport = penv.Program('strunz-transport', Glob('*main.cpp'))
+Return('strunz_transport')

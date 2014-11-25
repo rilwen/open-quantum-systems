@@ -1,0 +1,3 @@
+Import('env')
+cfa = env.StaticLibrary('cfa', Glob('*.cpp'))
+Return('cfa')

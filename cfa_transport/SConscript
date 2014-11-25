@@ -1,0 +1,12 @@
+Import('env')
+Import('protein_chain')
+Import('math')
+Import('cfa')
+Import('OTHER_LIBS')
+Import('mymode')
+penv = env.Clone()
+penv.Append(LIBS = [cfa, protein_chain, math] + OTHER_LIBS)
+if mymode == 'release':
+	penv.Append(CXXFLAGS = '-fwhole-program')	
+cfa_transport = penv.Program('cfa_transport', Glob('*.cpp'))
+Return('cfa_transport')

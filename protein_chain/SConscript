@@ -1,0 +1,3 @@
+Import('env')
+protein_chain = env.StaticLibrary('protein_chain', Glob('*.cpp'))
+Return('protein_chain')

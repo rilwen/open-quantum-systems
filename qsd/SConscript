@@ -1,0 +1,3 @@
+Import('env')
+qsd = env.StaticLibrary('qsd', Glob('*.cpp'))
+Return('qsd')

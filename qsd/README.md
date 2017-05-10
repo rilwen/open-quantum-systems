@@ -1,4 +1,4 @@
-(C) Averisera Ltd (Dr Agnieszka M. Werpachowska) 2011-2014
+(C) Averisera Ltd averisera.uk (Dr Agnieszka M. Werpachowska) 2011-2017
 
 Licensed under GNU Public License v3 (see https://www.gnu.org/licenses/gpl.html and LICENSE.txt). Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
 * Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.

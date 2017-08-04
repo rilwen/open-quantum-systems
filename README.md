@@ -1,7 +1,7 @@
 open-quantum-systems
 ====================
 
-(C) Dr Agnieszka M. Werpachowska 2011-2016
+(C) Dr Agnieszka M. Werpachowska 2011-2017
 
 Licensed under GNU Public License v3 (see https://www.gnu.org/licenses/gpl.html and LICENSE.txt). Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
 * Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
@@ -10,7 +10,7 @@ Licensed under GNU Public License v3 (see https://www.gnu.org/licenses/gpl.html 
 
 This is a C++ code for modelling open quantum systems, accompanying my paper 
 
-A. M. Werpachowska, "Reduced operator approximation for modelling open quantum systems", http://arxiv.org/abs/1212.1753
+A. M. Werpachowska, "Reduced operator approximation for modelling open quantum systems", Open Syst. Inf. Dyn., 22, 1550008 (2015)  http://www.worldscientific.com/doi/abs/10.1142/S1230161215500080 (http://arxiv.org/abs/1212.1753)
 
 It includes the Reduced Operator Approximation, Quantum State Diffusion and Pseudomode methods, algorithms for modelling quantum systems with static noise, as well as some general numerical methods.
 
